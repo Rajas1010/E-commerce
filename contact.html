@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleganza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center top 30px;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Eleganza</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+        <div class="navbar-menu" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <div class="cont">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button id="id-send-msg">Send Message</button>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-icon">&#10003;</div>
+            <h2 style="display: flex; justify-content: center;">Success &nbsp<img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/animated/1f60e.gif" alt="" style="height: 30px;"> </h2>
+            <p>Thank you for your message</p>
+            <button class="btn-close">Close</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box1">
+                <h2 class="footer-heading">Eleganza</h2>
+                <p>Discover the latest trends and timeless styles. Fashion that defines you.</p>
+                <div class="footer-icon-container">
+                    <a href="https://www.instagram.com/ras10._"><i class="fa-brands fa-instagram"
+                            style="color: white;"></i></a>
+                    <a href="https://github.com/Rajas1010"><i class="fa-brands fa-github" style="color: white;"></i></a>
+                    <a href="https://www.linkedin.com/in/rajas1010"><i class="fa-brands fa-linkedin"
+                            style="color: white;"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Eleganza.com</p>
+    </div>
+
+    <script>
+        document.getElementById('id-send-msg').addEventListener('click',()=> {
+            document.getElementById('popup').style.display = 'flex';
+        });
+        document.querySelector('.btn-close').addEventListener('click',()=>{
+            document.getElementById('popup').style.display = 'none';
+        });
+        window.addEventListener('click', event => {
+            if (event.target === document.getElementById('popup')) {
+                document.getElementById('popup').style.display = 'none';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
