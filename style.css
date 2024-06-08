@@ -4,7 +4,7 @@
 }
 html {
   user-select: none;
-  overflow-x: hidden;
+
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -183,6 +183,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  padding: 0px 10px;
 }
 .service-container2 div {
   background-color: #fff9c4;
@@ -387,6 +388,7 @@ object-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .news input {
   padding: 10px;
@@ -476,6 +478,9 @@ object-position: center;
 }
 .footer-icon-container i {
   color: #ff6f00;
+}
+.icon-large {
+  font-size: 25px;
 }
 .footer p {
   color: #1d232c;
@@ -604,6 +609,10 @@ textarea:focus {
   .navbar-links {
     display: none;
   }
+  .side-navbar-links a:hover {
+    border: solid black 1px;
+    padding: 10px 60px 10px 10px;
+  }
   .header-image {
     display: none;
   }
@@ -613,9 +622,14 @@ textarea:focus {
   .service-container1-heading {
     display: flex;
     gap: 5px;
+    font-size: 13px;
+    font-weight: bolder;
   }
   .service-container2 {
     flex-direction: column;
+  }
+  .news p{
+    padding: 20px;
   }
   .new-arrival-2{
     gap: 22px;
