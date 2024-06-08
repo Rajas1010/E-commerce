@@ -76,8 +76,8 @@ function generateProducts() {
     productBox.className = "product-box";
 
     const img = document.createElement("img");
-    img.src = `https://source.unsplash.com/random/480x480/?${color} ${dress}`;
-    // img.src = `https://picsum.photos/300/300?random=${i}&${color},${dress}`;
+    //img.src = `https://source.unsplash.com/random/480x480/?${color} ${dress}`;
+     img.src = `https://picsum.photos/300/300?random=${i}&${color},${dress}`;
     //img.src = `https://loremflickr.com/480/480/${color}_${dress}`;
 
     productBox.appendChild(img);

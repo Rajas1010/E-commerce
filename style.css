@@ -4,7 +4,6 @@
 }
 html {
   user-select: none;
-
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -478,10 +477,17 @@ object-position: center;
 }
 .footer-icon-container i {
   color: #ff6f00;
+  height: 25px;
 }
 .icon-large {
-  font-size: 25px;
+  font-size: 20px;
+  padding: 5px 2px;
 }
+.icon-large:hover{
+  color: rgb(0, 0, 0);
+  font-size:22px ;
+}
+
 .footer p {
   color: #1d232c;
 }
