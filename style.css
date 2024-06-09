@@ -169,6 +169,7 @@ body {
 .btn-shopNow:hover {
   background-color: #ffd600;
   transform: scale(1.05);
+  color: black;
 }
 
 .service-container1 {
@@ -384,7 +385,7 @@ height: 100%;
 border: none;
 border-radius: 20px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-object-fit: cover;
+object-fit: fill;
 object-position: center;
 }
 
