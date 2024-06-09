@@ -85,7 +85,6 @@ function generateProducts() {
     const p = document.createElement("p");
     p.textContent = `${color} ${dress}`;
     productBox.appendChild(p);
-
     container.appendChild(productBox);
   }
 }
