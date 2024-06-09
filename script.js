@@ -22,7 +22,7 @@ function closeNavbar() {
   productSearch.style.display = "flex";
 }
 
-
+/*
 
 const colors = [
   "cyan",
@@ -89,9 +89,11 @@ function generateProducts() {
   }
 }
 generateProducts();
+*/
+
+
 
 const searchInput = document.getElementById("search");
-
 searchInput.addEventListener("keyup", function (event) {
   const enteredValue = event.target.value.toUpperCase();
   const productBoxes = container.querySelectorAll(".product-box");
@@ -107,3 +109,44 @@ searchInput.addEventListener("keyup", function (event) {
 });
 
 
+const colors = [
+  "cyan", "maroon", "red", "yellow", "teal", "blue", "pink", "black",
+  "gray", "violet", "green", "orange", "purple", "brown", "khaki",
+  "magenta", "white"
+];
+
+const dresses = [
+  "Jacket", "Crop Top", "Pants", "Cardigan", "Shirt", "Sweater", "T-shirt",
+  "Swimsuit", "Blazer", "Skirt", "Dress", "Hoodie", "Overalls", "Play suit",
+  "Romper", "Shorts", "Blouse", "Tunic", "Jumpsuit", "Coat"
+];
+
+const container = document.getElementById("id-products");
+
+function generateProducts() {
+  for (let i = 0; i < 99; i++) {
+    const color = colors[i % colors.length];
+    const dress = dresses[i % dresses.length];
+    const productBox = document.createElement("div");
+    productBox.className = "product-box";
+
+    const img = document.createElement("img");
+    img.src = `images/collections/${color} ${dress}.jpg`;
+    productBox.appendChild(img);
+
+    const p = document.createElement("p");
+    p.textContent = `${color} ${dress}`;
+    productBox.appendChild(p);
+
+    const collectionShopBtn = document.createElement("button");
+    collectionShopBtn.textContent = "Shop Now";
+
+    collectionShopBtn.addEventListener('click', () => {
+      window.location.href = `product.html?color=${encodeURIComponent(color)}&dress=${encodeURIComponent(dress)}`;
+    });
+    productBox.appendChild(collectionShopBtn);
+    container.appendChild(productBox);
+  }
+}
+
+generateProducts();

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-container {
+            padding: 20px;
+            background-color: #fdfade;
+        }
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d232c;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #ff6f00;
+            margin-bottom: 10px;
+        }
+        .strike {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .product-discount {
+            font-size: 18px;
+            color: #ff6f00;
+            margin-bottom: 10px;
+        }
+        .product-payment {
+            font-size: 18px;
+            color: #1d232c;
+            margin-bottom: 20px;
+        }
+        .product-ratings-reviews, .product-colors, .product-sizes, .product-offers, .product-delivery, .product-seller, .product-details {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #1d232c;
+        }
+        .product-offers p, .product-details p, .product-delivery p, .product-seller p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="id-navbar">
+        <h1>Eleganza</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+        <div class="navbar-menu" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+    <div class="product-container">
+        <h1 id="product-name" class="product-name"></h1>
+        <img id="product-image" class="product-image" alt="Product Image">
+        <p id="product-price" class="product-price"></p>
+        <p id="product-discount" class="product-discount"></p>
+        <p id="product-payment" class="product-payment"></p>
+        <p id="product-ratings-reviews" class="product-ratings-reviews"></p>
+        <p id="product-colors" class="product-colors"></p>
+        <p id="product-sizes" class="product-sizes"></p>
+        <div id="product-offers" class="product-offers"></div>
+        <div id="product-delivery" class="product-delivery"></div>
+        <div id="product-seller" class="product-seller"></div>
+        <div id="product-details" class="product-details"></div>
+        <div id="ratings-reviews" class="ratings-reviews"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box1">
+                <h2 class="footer-heading">Eleganza</h2>
+                <p>Discover the latest trends and timeless styles. Fashion that defines you.</p>
+                <div class="footer-icon-container">
+                    <a href="https://www.instagram.com/ras10._"><i class="fa-brands fa-instagram icon-large"
+                            style="color: white;"></i></a>
+                    <a href="https://github.com/Rajas1010"><i class="fa-brands fa-github icon-large"
+                            style="color: white;"></i></a>
+                    <a href="https://www.linkedin.com/in/rajas1010"><i class="fa-brands fa-linkedin icon-large"
+                            style="color: white;"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Eleganza.com</p>
+    </div>
+    <script src="product.js"></script>
+</body>
+</html>

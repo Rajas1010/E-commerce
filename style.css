@@ -216,13 +216,13 @@ body {
   width: 110px;
   padding: 7px 12px;
   color: white;
-  position: absolute;
-  top: 65%;
-  left: 18%;
   border-radius: 10px;
   border: none;
   background-color: #ff6f00;
   transition: 0.5s;
+  position: absolute;
+  top: 65%;
+  left: 18%;
 }
 .btn-buy img {
   height: 20px;
@@ -502,6 +502,11 @@ object-position: center;
 /*collections.html*/
 .product-section {
   margin-top: 20px;
+
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 .product-search {
   width: 80%;
@@ -533,15 +538,39 @@ object-position: center;
 .product-box {
   text-align: center;
   flex-basis: 25%;
+
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 .product-box img {
   border-radius: 10px;
   transition: 0.4s;
   margin-top: 25px;
+
+  max-width: 100%;
+  height: auto;
 }
 .product-box img:hover {
   box-shadow: rgba(0, 0, 0) 0px 10px 50px;
 }
+.product-box button{
+  margin-top: 10px;
+  padding: 7px 12px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff6f00;
+  transition: 0.5s;
+}
+.product-box button:hover{
+  box-shadow: rgb(255, 255, 255) 5px 5px 30px -10px;
+  background-color: #ffd600;
+  color: #1d232c;
+  letter-spacing: 2px;
+}
+
 
 /*contact.html*/
 .cont {
