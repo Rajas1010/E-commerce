@@ -1,9 +1,8 @@
-// Helper function to replace newline characters with <br> tags
+
 function replaceNewlinesWithBreaks(text) {
     return text.replace(/\n/g, '<br>');
   }
   
-  // Arrays to store random values
   const sellers = ["KOTTY", "ELEGANZA", "STYLO", "TRENDY"];
   const prices = ["₹329", "₹399", "₹499", "₹599"];
   const discounts = ["83%", "75%", "67%", "50%"];
@@ -29,12 +28,11 @@ function replaceNewlinesWithBreaks(text) {
     "Type -A-line\nBrand Color -Jet Black\nStyle Code- KTTWOMENSSKIRT57\nColor-Black\nIdeal For-Women\nSuitable For-Western Wear\nFabric-Cotton Blend\nFabric Care-Hand wash\nSales Package-1\nNet Quantity-1\nCasual meets effortlessly cool with our trendy Skirts. Create some fashion ripples in your circle with this stylish rust skirt from the latest collection of Kotty. Beautifully tailored in fine cotton Lycra blend for natural lustre and unmatched drape, it's awesome solid pattern make it a great piece to experiment a variety of combinations with. Pair it with a contrast top for a cool look. Kindly ensure the size chart before buying.\nManufacturing, Packaging and Import Info",
   ];
   
-  // Fetch URL parameters
   const urlParams = new URLSearchParams(window.location.search);
   const color = urlParams.get('color');
   const dress = urlParams.get('dress');
   
-  // Randomly select other details
+
   const seller = sellers[Math.floor(Math.random() * sellers.length)];
   const price = prices[Math.floor(Math.random() * prices.length)];
   const discount = discounts[Math.floor(Math.random() * discounts.length)];
@@ -45,14 +43,12 @@ function replaceNewlinesWithBreaks(text) {
   const sellerRating = sellerRatings[Math.floor(Math.random() * sellerRatings.length)];
   const description = descriptions[Math.floor(Math.random() * descriptions.length)];
   
-  // Construct image path
+
   const imagePath = `images/collections/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
   
-  // Extract the numerical value from the price string and calculate the payment amount
   const numericalPrice = parseInt(price.replace('₹', '').replace(',', ''), 10);
   const paymentAmount = numericalPrice - 6;
   
-  // Update HTML content
   document.getElementById('product-name').innerHTML = `${seller} ${color} ${dress}`;
   document.getElementById('product-image').src = imagePath;
   document.getElementById('product-price').innerHTML = `${price} <span class="strike">₹1,999</span>`;
