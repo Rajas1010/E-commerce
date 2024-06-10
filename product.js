@@ -44,7 +44,7 @@ function replaceNewlinesWithBreaks(text) {
   const description = descriptions[Math.floor(Math.random() * descriptions.length)];
   
 
-  const imagePath = `images/collections/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
+  const imagePath = `images/productImg/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
   
   const numericalPrice = parseInt(price.replace('₹', '').replace(',', ''), 10);
   const paymentAmount = numericalPrice - 6;
