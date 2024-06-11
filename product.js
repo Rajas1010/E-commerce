@@ -1,9 +1,8 @@
-// Helper function to replace newline characters with <br> tags
+
 function replaceNewlinesWithBreaks(text) {
   return text.replace(/\n/g, '<br>');
 }
 
-// Arrays to store random values
 const sellers = ["KOTTY", "ELEGANZA", "STYLO", "TRENDY"];
 const prices = ["₹329", "₹399", "₹499", "₹599"];
 const discounts = ["83%", "75%", "67%", "50%"];
@@ -25,17 +24,27 @@ const deliveryDate = new Date();
 deliveryDate.setDate(deliveryDate.getDate() + 3);
 
 const sellerRatings = ["3.8", "4.2", "4.0", "3.5"];
-const descriptions = [
-  "Type -A-line<br>Brand Color -Jet Black<br>Style Code- KTTWOMENSSKIRT57<br>Color-Black<br>Ideal For-Women<br>Suitable For-Western Wear<br>Fabric-Cotton Blend<br>Fabric Care-Hand wash<br>Sales Package-1<br>Net Quantity-1<br>Casual meets effortlessly cool with our trendy Skirts. Create some fashion ripples in your circle with this stylish rust skirt from the latest collection of Kotty. Beautifully tailored in fine cotton Lycra blend for natural lustre and unmatched drape, it's awesome solid pattern make it a great piece to experiment a variety of combinations with. Pair it with a contrast top for a cool look. Kindly ensure the size chart before buying.<br>Manufacturing, Packaging and Import Info",
-];
+const descriptions = [`<h4>product Details</h4>Type -A-line
+  Brand Color -Jet Black
+  Style Code- KTTWOMENSSKIRT57
+  Color-Black
+  Ideal For-Women
+  Suitable For-Western Wear
+  Fabric-Cotton Blend
+  Fabric Care-Hand wash
+  Sales Package-1
+  Net Quantity-1
+  Casual meets effortlessly cool with our trendy Skirts. 
+  Create some fashion ripples in your circle with this stylish rust skirt from the latest collection of Kotty. 
+  Beautifully tailored in fine cotton Lycra blend for natural lustre and unmatched drape,
+  it's awesome solid pattern make it a great piece to experiment a variety of combinations with.
+  Pair it with a contrast top for a cool look. Kindly ensure the size chart before buying.
+  Manufacturing, Packaging and Import Info`];
 
-// Fetch URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const color = urlParams.get('color');
 const dress = urlParams.get('dress');
 const imgSrc = decodeURIComponent(urlParams.get('imgSrc'));
-
-// Randomly select other details
 const seller = sellers[Math.floor(Math.random() * sellers.length)];
 const price = prices[Math.floor(Math.random() * prices.length)];
 const discount = discounts[Math.floor(Math.random() * discounts.length)];
@@ -45,12 +54,9 @@ const randomSizes = sizes;
 const selectedOffers = offers;
 const sellerRating = sellerRatings[Math.floor(Math.random() * sellerRatings.length)];
 const description = descriptions[Math.floor(Math.random() * descriptions.length)];
-
-// Extract the numerical value from the price string and calculate the payment amount
 const numericalPrice = parseInt(price.replace('₹', '').replace(',', ''), 10);
 const paymentAmount = numericalPrice - 6;
 
-// Update HTML content
 document.getElementById('product-slr').innerHTML = `${seller}`;
 document.getElementById('product-name').textContent = `${color} ${dress}`;
 document.getElementById('product-image').src = imgSrc; // Set the image source
@@ -65,16 +71,58 @@ document.getElementById('product-delivery').innerHTML = replaceNewlinesWithBreak
 document.getElementById('product-seller').innerHTML = replaceNewlinesWithBreaks(`Seller: ${seller} ${sellerRating} (some random name)\n10 Days Return Policy`);
 document.getElementById('product-details').innerHTML = replaceNewlinesWithBreaks(description);
 document.getElementById('ratings-reviews').innerHTML = `
-    <h3>Ratings & Reviews</h3>
-    <p>${ratingReview}</p>
-    <p>Rate Product:</p>
-    <p>Images uploaded by customers: + 25</p>
+    <h4>Ratings & Reviews</h4>
+    <p>${ratingReview}</p><br>
+
+    <h5>Rate Product:<h5>
+    
+    <h6>Images uploaded by customers: + 25</h6><br>
     <p>5 star: love think product go for it 🥰</p>
     <p>Pallavi Sharma, Dec 2022</p>
     <p>28626 likes</p>
-    <p>Certified Buyer, Shimla</p>
+    <p>Certified Buyer, Shimla</p><br>
+
     <p>4 star: like this skirt, this dress is so comfortable 💜💜 thank you Eleganza..... 🤗</p>
     <p>Eleganza Customer, 11 months ago</p>
     <p>373 likes</p>
     <p>Certified Buyer, New Delhi</p>
 `;
+
+var sidenav = document.querySelector(".side-navbar");
+var navbar = document.querySelector(".navbar");
+var productSearch = document.querySelector(".product-search");
+sidenav.style.left = "-60%";
+
+function showNavbar() {
+  sidenav.style.left = "0";
+
+  navbar.classList.add("hide");
+  setTimeout(() => {
+    navbar.classList.add("hidden");
+  }, 1000);
+  productSearch.style.display = "none";
+}
+
+function closeNavbar() {
+  sidenav.style.left = "-60%";
+  navbar.classList.remove("hide");
+  setTimeout(() => {
+    navbar.classList.add("show");
+  }, 1000);
+  productSearch.style.display = "flex";
+}
+
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("keyup", function (event) {
+  const enteredValue = event.target.value.toUpperCase();
+  const productBoxes = container.querySelectorAll(".product-box");
+
+  productBoxes.forEach((box) => {
+    const pName = box.querySelector("p").textContent;
+    if (pName.toUpperCase().indexOf(enteredValue) < 0) {
+      box.style.display = "none";
+    } else {
+      box.style.display = "block";
+    }
+  });
+});

@@ -424,7 +424,6 @@ object-position: center;
   transition: 0.5s;
 }
 
-
 #validationPopup .popup-content {
   background-color: #ffd600;
   padding: 20px;
@@ -471,8 +470,6 @@ object-position: center;
   border-left:solid #fdfade 3px ;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 5px;
 }
-
-
 .footer {
   margin-top: 20px;
   padding: 40px;
@@ -571,7 +568,6 @@ object-position: center;
   letter-spacing: 2px;
 }
 
-
 /*contact.html*/
 .cont {
   display: flex;
@@ -643,6 +639,43 @@ textarea:focus {
   font-size: 24px;
   color: #1d232c;
 }
+
+.product-container {
+  padding: 20px;
+}
+.product-name,.product-image {
+  margin-bottom: 20px;
+}
+.product-image {
+  border-radius: 10px;
+
+}
+.product-price {
+  font-size: 20px;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+.strike {
+  text-decoration: line-through;
+  color: #999;
+}
+.product-discount {
+  font-size: 18px;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+.product-payment {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.product-ratings-reviews, .product-colors, .product-sizes, .product-offers, .product-delivery, .product-seller, .product-details {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.product-offers p, .product-details p, .product-delivery p, .product-seller p {
+  margin-bottom: 10px;
+}
+
 
 @media screen and (max-width: 700px) {
   .navbar-menu {

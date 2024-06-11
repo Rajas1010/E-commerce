@@ -3,56 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Eleganza</title>
+    <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f6cd.svg"
+        type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .product-container {
-            padding: 20px;
-            background-color: #fdfade;
-        }
-        .product-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1d232c;
-            margin-bottom: 20px;
-        }
-        .product-image {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .product-price {
-            font-size: 20px;
-            color: #ff6f00;
-            margin-bottom: 10px;
-        }
-        .strike {
-            text-decoration: line-through;
-            color: #999;
-        }
-        .product-discount {
-            font-size: 18px;
-            color: #ff6f00;
-            margin-bottom: 10px;
-        }
-        .product-payment {
-            font-size: 18px;
-            color: #1d232c;
-            margin-bottom: 20px;
-        }
-        .product-ratings-reviews, .product-colors, .product-sizes, .product-offers, .product-delivery, .product-seller, .product-details {
-            margin-bottom: 20px;
+        h5{
             font-size: 16px;
-            color: #1d232c;
         }
-        .product-offers p, .product-details p, .product-delivery p, .product-seller p {
-            margin-bottom: 10px;
+        h6{
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="product-container">
+    <nav class="navbar" id="id-navbar">
+        <h1>Eleganza</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+        <div class="navbar-menu" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
 
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+    <div class="product-container">
         <h1 id="product-slr" class="product-slr"></h1>
         <h2 id="product-name" class="product-name"></h2>
         <img id="product-image" class="product-image" alt="Product Image">
@@ -68,6 +62,27 @@
         <div id="product-details" class="product-details"></div>
         <div id="ratings-reviews" class="ratings-reviews"></div>
     </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box1">
+                <h2 class="footer-heading">Eleganza</h2>
+                <p>Discover the latest trends and timeless styles. Fashion that defines you.</p>
+                <div class="footer-icon-container">
+                    <a href="https://www.instagram.com/ras10._"><i class="fa-brands fa-instagram icon-large"
+                            style="color: white;"></i></a>
+                    <a href="https://github.com/Rajas1010"><i class="fa-brands fa-github icon-large"
+                            style="color: white;"></i></a>
+                    <a href="https://www.linkedin.com/in/rajas1010"><i class="fa-brands fa-linkedin icon-large"
+                            style="color: white;"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Eleganza.com</p>
+    </div>
     <script src="product.js"></script>
+   
+
 </body>
 </html>
