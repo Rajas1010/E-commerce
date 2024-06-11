@@ -60,7 +60,7 @@ function generateProducts() {
     productBox.className = "product-box";
 
     const img = document.createElement("img");
-    const imgSrc = `./images/collections/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
+    const imgSrc = `./images/productImg/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
     img.src = imgSrc;
     img.alt = `${color} ${dress}`;    
     productBox.appendChild(img);
