@@ -71,9 +71,11 @@ function generateProducts() {
 
     const collectionShopBtn = document.createElement("button");
     collectionShopBtn.textContent = "Shop Now";
+    collectionShopBtn.setAttribute('data-img-src',imgSrc);
     collectionShopBtn.onclick = () => {
-      window.location.href = `product.html?color=${color}&dress=${dress}&imgSrc=${encodeURIComponent(imgSrc)}`;
-    };
+      const encodedImgSrc = encodeURIComponent(collectionShopBtn.getAttribute('data-img-src'));
+      window.location.href = `product.html?color=${color}&dress=${dress}&imgSrc=${encodedImgSrc}`;
+       };
     productBox.appendChild(collectionShopBtn);
     container.appendChild(productBox);
   }

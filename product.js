@@ -26,14 +26,14 @@ deliveryDate.setDate(deliveryDate.getDate() + 3);
 
 const sellerRatings = ["3.8", "4.2", "4.0", "3.5"];
 const descriptions = [
-  "Type -A-line\nBrand Color -Jet Black\nStyle Code- KTTWOMENSSKIRT57\nColor-Black\nIdeal For-Women\nSuitable For-Western Wear\nFabric-Cotton Blend\nFabric Care-Hand wash\nSales Package-1\nNet Quantity-1\nCasual meets effortlessly cool with our trendy Skirts. Create some fashion ripples in your circle with this stylish rust skirt from the latest collection of Kotty. Beautifully tailored in fine cotton Lycra blend for natural lustre and unmatched drape, it's awesome solid pattern make it a great piece to experiment a variety of combinations with. Pair it with a contrast top for a cool look. Kindly ensure the size chart before buying.\nManufacturing, Packaging and Import Info",
+  "Type -A-line<br>Brand Color -Jet Black<br>Style Code- KTTWOMENSSKIRT57<br>Color-Black<br>Ideal For-Women<br>Suitable For-Western Wear<br>Fabric-Cotton Blend<br>Fabric Care-Hand wash<br>Sales Package-1<br>Net Quantity-1<br>Casual meets effortlessly cool with our trendy Skirts. Create some fashion ripples in your circle with this stylish rust skirt from the latest collection of Kotty. Beautifully tailored in fine cotton Lycra blend for natural lustre and unmatched drape, it's awesome solid pattern make it a great piece to experiment a variety of combinations with. Pair it with a contrast top for a cool look. Kindly ensure the size chart before buying.<br>Manufacturing, Packaging and Import Info",
 ];
 
 // Fetch URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const color = urlParams.get('color');
 const dress = urlParams.get('dress');
-const imgSrc = urlParams.get('imgSrc');
+const imgSrc = decodeURIComponent(urlParams.get('imgSrc'));
 
 // Randomly select other details
 const seller = sellers[Math.floor(Math.random() * sellers.length)];
@@ -52,7 +52,7 @@ const paymentAmount = numericalPrice - 6;
 
 // Update HTML content
 document.getElementById('product-name').innerHTML = `${seller} ${color} ${dress}`;
-document.getElementById('product-image').src = decodeURIComponent(imgSrc);
+document.getElementById('product-image').src = imgSrc; // Set the image source
 document.getElementById('product-price').innerHTML = `${price} <span class="strike">₹1,999</span>`;
 document.getElementById('product-discount').innerHTML = `${discount} off`;
 document.getElementById('product-payment').innerHTML = `Or Pay ₹${paymentAmount} + 6 coins`;
