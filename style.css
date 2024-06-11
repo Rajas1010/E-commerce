@@ -5,7 +5,7 @@
 html {
   user-select: none;
   overflow-y: scroll;
-  scrollbar-width: none;
+  scrollbar-width:thin;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -535,17 +535,17 @@ object-position: center;
 .product-box {
   text-align: center;
   flex-basis: 25%;
-
   width: 200px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 10px;
   text-align: center;
+  margin-top: 20px;
 }
 .product-box img {
   border-radius: 10px;
   transition: 0.4s;
   margin-top: 25px;
-
   max-width: 100%;
   height: auto;
 }
@@ -742,8 +742,18 @@ textarea:focus {
   .new-arrival-2{
     gap: 22px;
   }
+  .cls-products{
+    padding: 0px;
+  }
   .product-box {
-    margin-top: 25px;
+    margin:10px 12px 0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-box p{
+    width:85px;
+    
   }
 
   .product-search {
