@@ -22,77 +22,6 @@ function closeNavbar() {
   productSearch.style.display = "flex";
 }
 
-/*
-
-const colors = [
-  "cyan",
-  "maroon",
-  "red",
-  "yellow",
-  "teal",
-  "blue",
-  "pink",
-  "black",
-  "gray",
-  "violet",
-  "green",
-  "orange",
-  "purple",
-  "brown",
-  "khaki",
-  "magenta",
-  "white",
-];
-
-const dresses = [
-  "Jacket",
-  "Crop Top",
-  "Pants",
-  "Cardigan",
-  "Shirt",
-  "Sweater",
-  "T-shirt",
-  "Swimsuit",
-  "Blazer",
-  "Skirt",
-  "Dress",
-  "Hoodie",
-  "Overalls",
-  "Play suit",
-  "Romper",
-  "Shorts",
-  "Blouse",
-  "Tunic",
-  "Jumpsuit",
-  "Coat",
-];
-const container = document.getElementById("id-products");
-
-function generateProducts() {
-  for (let i = 0; i < 99; i++) {
-    const color = colors[i % colors.length];
-    const dress = dresses[i % dresses.length];
-    const productBox = document.createElement("div");
-    productBox.className = "product-box";
-
-    const img = document.createElement("img");
-    //img.src = `https://source.unsplash.com/random/480x480/?${color} ${dress}`;
-     img.src = `https://picsum.photos/300/300?random=${i}&${color},${dress}`;
-    //img.src = `https://loremflickr.com/480/480/${color}_${dress}`;
-
-    productBox.appendChild(img);
-
-    const p = document.createElement("p");
-    p.textContent = `${color} ${dress}`;
-    productBox.appendChild(p);
-    container.appendChild(productBox);
-  }
-}
-generateProducts();
-*/
-
-
-
 const searchInput = document.getElementById("search");
 searchInput.addEventListener("keyup", function (event) {
   const enteredValue = event.target.value.toUpperCase();
@@ -131,7 +60,9 @@ function generateProducts() {
     productBox.className = "product-box";
 
     const img = document.createElement("img");
-    img.src = `images/collections/${color} ${dress}.jpg`;
+    const imgSrc = `images/collections/${color.toLowerCase()} ${dress.toLowerCase()}.jpg`;
+    img.src = imgSrc;
+    img.alt = `${color} ${dress}`;    
     productBox.appendChild(img);
 
     const p = document.createElement("p");
@@ -140,10 +71,9 @@ function generateProducts() {
 
     const collectionShopBtn = document.createElement("button");
     collectionShopBtn.textContent = "Shop Now";
-
-    collectionShopBtn.addEventListener('click', () => {
-      window.location.href = `product.html?color=${encodeURIComponent(color)}&dress=${encodeURIComponent(dress)}`;
-    });
+    collectionShopBtn.onclick = () => {
+      window.location.href = `product.html?color=${color}&dress=${dress}&imgSrc=${encodeURIComponent(imgSrc)}`;
+    };
     productBox.appendChild(collectionShopBtn);
     container.appendChild(productBox);
   }
