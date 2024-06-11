@@ -51,7 +51,8 @@ const numericalPrice = parseInt(price.replace('₹', '').replace(',', ''), 10);
 const paymentAmount = numericalPrice - 6;
 
 // Update HTML content
-document.getElementById('product-name').innerHTML = `${seller} ${color} ${dress}`;
+document.getElementById('product-slr').innerHTML = `${seller}`;
+document.getElementById('product-name').textContent = `${color} ${dress}`;
 document.getElementById('product-image').src = imgSrc; // Set the image source
 document.getElementById('product-price').innerHTML = `${price} <span class="strike">₹1,999</span>`;
 document.getElementById('product-discount').innerHTML = `${discount} off`;
