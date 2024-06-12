@@ -5,7 +5,7 @@
 html {
   user-select: none;
   overflow-y: scroll;
-  scrollbar-width:thin;
+  scrollbar-width:none;
 }
 html::-webkit-scrollbar {
   display: none;
