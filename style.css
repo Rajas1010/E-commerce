@@ -205,6 +205,10 @@ body {
 .new-arrival-container img {
   transition: 0.5s;
   margin-top: 10px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+ 
 }
 .new-arrival-container img:hover {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
