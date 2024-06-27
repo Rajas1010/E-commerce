@@ -710,6 +710,10 @@ textarea:focus {
   .service-container2 {
     flex-direction: column;
   }
+  .service-container2 > div:first-child {
+    display: none;
+}
+
   .page-wrapper{
     height: 625px;
   }
