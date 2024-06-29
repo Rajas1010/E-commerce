@@ -28,16 +28,20 @@ To view the project, simply visit the hosted website on GitHub:
 
 ## Screenshots
 Include some screenshots here to visually represent our project.
+
+Homepage
 ![Screenshot 1](images/ScreenshotL1.png)
 
+Advertisement videos
 ![Screenshot 2](images/ScreenshotL2.png)
 
+contact page
 ![Screenshot 3](images/ScreenshotL3.png)
-
+### Mobile View
 <p float="left">
-  <img src="images/ScreenshotM1.png" width="350" />
-  <img src="images/ScreenshotM2.png" width="350" />
-  <img src="images/ScreenshotM3.png" width="350" />
+  <img src="images/ScreenshotM1.png" width="330" />
+  <img src="images/ScreenshotM2.png" width="330" />
+  <img src="images/ScreenshotM3.png" width="330" />
 </p>
 ## Video
 Include a video demonstrating the features and functionality of our project.
