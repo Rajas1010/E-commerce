@@ -27,13 +27,13 @@ To view the project, simply visit the hosted website on GitHub:
 [Eleganza](https://rajas1010.github.io/E-commerce/)
 
 ## Screenshots
-Include some screenshots here to visually represent your project.
+Include some screenshots here to visually represent our project.
 ![Screenshot 1](path/to/screenshot1.png)
 ![Screenshot 2](path/to/screenshot2.png)
 ![Screenshot 3](path/to/screenshot3.png)
 
 ## Video
-Include a video demonstrating the features and functionality of your project.
+Include a video demonstrating the features and functionality of our project.
 [Project Demo Video](path/to/video.mp4)
 
 ## Conclusion
