@@ -28,9 +28,9 @@ To view the project, simply visit the hosted website on GitHub:
 
 ## Screenshots
 Include some screenshots here to visually represent our project.
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
-![Screenshot 3](path/to/screenshot3.png)
+![Screenshot 1](images/screenshotL1.png)
+![Screenshot 2](images/screenshotL2.png)
+![Screenshot 3](images/screenshotL3.png)
 
 ## Video
 Include a video demonstrating the features and functionality of our project.
