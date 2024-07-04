@@ -27,7 +27,7 @@ To view the project, simply visit the hosted website on GitHub:
 [Eleganza](https://rajas1010.github.io/E-commerce/)
 
 ## Screenshots
-Include some screenshots here to visually represent our project.
+Include some screenshots here to visually represent my project.
 
 Homepage
 ![Screenshot 1](images/ScreenshotL1.png)
@@ -43,9 +43,9 @@ contact page
   <img src="images/ScreenshotM2.png" width="260" />
   <img src="images/ScreenshotM3.png" width="260" />
 </p>
-## Video
+<!-- ## Video
 Include a video demonstrating the features and functionality of our project.
-[Project Demo Video](path/to/video.mp4)
+[Project Demo Video](path/to/video.mp4)-->
 
 ## Conclusion
 Eleganza represents a culmination of thoughtful design and functional excellence, addressing various challenges to deliver a high-quality user experience. The project highlights the importance of responsive design and user-friendly interfaces in modern e-commerce websites. Feedback and suggestions are always welcome as I continue to refine and enhance this project.
