@@ -39,9 +39,9 @@ contact page
 ![Screenshot 3](images/ScreenshotL3.png)
 ### Mobile View
 <p float="left">
-  <img src="images/ScreenshotM1.png" width="300" />
-  <img src="images/ScreenshotM2.png" width="300" />
-  <img src="images/ScreenshotM3.png" width="300" />
+  <img src="images/ScreenshotM1.png" width="275" />
+  <img src="images/ScreenshotM2.png" width="275" />
+  <img src="images/ScreenshotM3.png" width="275" />
 </p>
 ## Video
 Include a video demonstrating the features and functionality of our project.
